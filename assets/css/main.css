@@ -135,10 +135,11 @@ i {
 
 .intro_headline {
     text-align: center;
-    margin-top: 200px;
+    margin: 200px 20px 0 20px;
     font-weight: 350;
     font-size: 50px;
-    color: white;
+    color: white
+    ;
 }
 
 .split-pic{
@@ -146,7 +147,7 @@ i {
 }
 
 /* HeaderWrap */
-#headerwrap {
+.headerwrap {
 	/* background: url(../img/bg01.jpg) no-repeat center top; */
 	/*background-color: #3498db;*/
     /*background: url(../img/Columbia-Butler-Library.jpg) no-repeat top center;*/
@@ -174,11 +175,57 @@ i {
     background-size: cover;
 }
 
-#headerwrap h1 {
+.headerwrap-student{
+    /* background: url(../img/bg01.jpg) no-repeat center top; */
+    /*background-color: #3498db;*/
+    /*background: url(../img/Columbia-Butler-Library.jpg) no-repeat top center;*/
+    background: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.7),
+          rgba(0, 0, 0, 0.7)
+        ),
+        url(../img/mbas-having-fun.jpg) no-repeat top center;
+    opacity: 0.8;
+    margin-top: -20px;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 650px;
+    width: 100%;
+    
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.headerwrap h1 {
 	margin-top: 60px;
 	margin-bottom: 15px;
 	color: white;
 	font-size: 45px;
 	font-weight: 300;
 	letter-spacing: 1px;
+}
+
+.panel {
+    border-radius: 3px;
+}
+
+.panel-body {
+    background: white;
+    padding: 0px;
+    min-height: 60px;
+}
+
+.panel-heading {
+    padding: 0px;
+}
+
+.panel-heading h3 {
+    padding: 3px;
 }
