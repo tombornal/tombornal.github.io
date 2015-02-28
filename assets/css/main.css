@@ -229,3 +229,7 @@ i {
 .panel-heading h3 {
     padding: 3px;
 }
+
+.ss-choice-item {
+    list-style-type: none;
+}
