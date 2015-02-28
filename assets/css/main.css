@@ -181,11 +181,11 @@ i {
     /*background: url(../img/Columbia-Butler-Library.jpg) no-repeat top center;*/
     background: 
         linear-gradient(
-          rgba(0, 0, 0, 0.7),
-          rgba(0, 0, 0, 0.7)
+          rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0.8)
         ),
-        url(../img/mbas-having-fun.jpg) no-repeat top center;
-    opacity: 0.8;
+        url(../img/surfboard.jpeg) no-repeat top center;
+    opacity: 0.9;
     margin-top: -20px;
     background-attachment: relative;
     background-position: center center;
