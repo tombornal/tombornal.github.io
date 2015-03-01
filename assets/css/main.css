@@ -35,7 +35,7 @@ h3 {
 }
 
 h4 {
-	color: #95a5a6;
+	color: #687070;
 	font-weight: 400;
 	font-size: 20px;
 }
@@ -56,11 +56,11 @@ a {
     color: #3498db;
     word-wrap: break-word;
 
-    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
-    transition: color 0.1s ease-in, background 0.1s ease-in;
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in, font-weight 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in, font-weight 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in, font-weight 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in, font-weight 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in, font-weight 0.1s ease-in;
 }
 
 a:hover,
@@ -80,7 +80,7 @@ a:after {
 
 #learn-more-btn{
     color: #C1C1C1;
-    background-color: transparent;
+    background-color: transparent;  
     font-size: 20px;
     padding: 10px 20px 10px 20px;
     border: solid #C1C1C1 2px;
@@ -105,14 +105,23 @@ hr {
 .navbar-default {
 	background-color: black;
 	border-color: transparent;
+    opacity: 0.9;
 }
 
 .navbar-default .navbar-brand {
 	color: white;
 }
 
+.navbar-default .navbar-brand:hover {
+    color: white;
+}
+
 .navbar-default .navbar-nav > li > a {
 	color: white;
+}
+
+#students-link:hover, #contacts-link:hover, #prosp-link:hover{
+    color: #B0B0B0;
 }
 
 /* Helpers */
@@ -212,18 +221,36 @@ i {
 	letter-spacing: 1px;
 }
 
-.panel {
-    border-radius: 20px;
+.plan {
+    border-radius: 6px;
+    border-color: #dedede;
+    border-style: solid;
+    border-width: 1px 1px 3px;
+    margin: 0 10px 30px;
+    overflow: hidden;
+    vertical-align: top;
+    background: #fff;
 }
 
-.panel-body {
+.plan-title {
+    margin: 0px;
+    color: white;
+    padding: 10px 0px 10px;
+}
+
+.plan-body {
     background: white;
     padding: 0px;
-    min-height: 60px;
+    min-height: 120px;
+    font-size: 20px;
 }
 
-.panel-heading {
-    padding: 0px;
+.plan-heading-center {
+    background-color: #72a86a;
+}
+
+.plan-heading-flank {
+    background-color: #83b2c2;
 }
 
 .panel-heading h3 {
@@ -233,3 +260,47 @@ i {
 .ss-choice-item {
     list-style-type: none;
 }
+
+.container-signup-btn {
+    margin: 20px;
+}
+
+.signup-btn{
+    color: black;
+    background-color: transparent;  
+    font-size: 20px;
+    padding: 5px 10px 5px 10px;
+    border: solid #C1C1C1 2px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.signup-btn:hover {
+    text-decoration: none;
+    color: #83b2c2;
+    border:2px solid #C1C1C1;
+    font-weight: 500;
+     background-color: #fff; background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f5f5f5));
+     background-image: -webkit-linear-gradient(top, #fff, #f5f5f5);
+     background-image: -moz-linear-gradient(top, #fff, #f5f5f5);
+     background-image: -ms-linear-gradient(top, #fff, #f5f5f5);
+     background-image: -o-linear-gradient(top, #fff, #f5f5f5);
+     background-image: linear-gradient(to bottom, #fff, #f5f5f5);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#fff, endColorstr=#f5f5f5);
+}
+
+.signup-btn2{
+    color: #C1C1C1;
+    background-color: transparent;  
+    font-size: 20px;
+    padding: 5px 10px 5px 10px;
+    border: solid #C1C1C1 2px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.signup-btn2:hover {
+    color: black;
+    background: #C1C1C1;
+    text-decoration: none;
+}
+
