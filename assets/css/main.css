@@ -13,6 +13,7 @@ body {
     font-weight: 300;
     font-size: 16px;
     color: #555;
+    margin: 0px;
 
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
@@ -157,9 +158,6 @@ i {
 
 /* HeaderWrap */
 .headerwrap {
-	/* background: url(../img/bg01.jpg) no-repeat center top; */
-	/*background-color: #3498db;*/
-    /*background: url(../img/Columbia-Butler-Library.jpg) no-repeat top center;*/
     background: 
         linear-gradient(
           rgba(0, 0, 0, 0.7),
@@ -170,6 +168,8 @@ i {
     margin-top: -20px;
 	background-attachment: relative;
 	background-position: center center;
+    background-size: cover;
+    overflow: hidden;
 	min-height: 650px;
 	width: 100%;
 	
@@ -185,9 +185,6 @@ i {
 }
 
 .headerwrap-student{
-    /* background: url(../img/bg01.jpg) no-repeat center top; */
-    /*background-color: #3498db;*/
-    /*background: url(../img/Columbia-Butler-Library.jpg) no-repeat top center;*/
     background: 
         linear-gradient(
           rgba(0, 0, 0, 0.8),
@@ -198,6 +195,8 @@ i {
     margin-top: -20px;
     background-attachment: relative;
     background-position: center center;
+    background-size: cover;
+    overflow: hidden;
     min-height: 650px;
     width: 100%;
     
