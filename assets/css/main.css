@@ -225,7 +225,7 @@ i {
     border-color: #dedede;
     border-style: solid;
     border-width: 1px 1px 3px;
-    margin: 0 10px 30px;
+    margin: 0 10px;
     overflow: hidden;
     vertical-align: top;
     background: #fff;
@@ -239,9 +239,22 @@ i {
 
 .plan-body {
     background: white;
-    padding: 0px;
+    padding: 12px;
     min-height: 120px;
     font-size: 20px;
+}
+
+.plan-pricing {
+    background: #888888;
+    color: white;
+    font-size: 26px;
+    padding: 3px;
+}
+
+.sup {
+    vertical-align: super;
+    font-size: 14px;
+    text-transform: uppercase;
 }
 
 .plan-heading-center {
@@ -261,7 +274,7 @@ i {
 }
 
 .container-signup-btn {
-    margin: 20px;
+    margin: 30px 0px 10px;
 }
 
 .signup-btn{
@@ -286,20 +299,3 @@ i {
      background-image: -o-linear-gradient(top, #fff, #f5f5f5);
      background-image: linear-gradient(to bottom, #fff, #f5f5f5);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#fff, endColorstr=#f5f5f5);
 }
-
-.signup-btn2{
-    color: #C1C1C1;
-    background-color: transparent;  
-    font-size: 20px;
-    padding: 5px 10px 5px 10px;
-    border: solid #C1C1C1 2px;
-    text-decoration: none;
-    border-radius: 6px;
-}
-
-.signup-btn2:hover {
-    color: black;
-    background: #C1C1C1;
-    text-decoration: none;
-}
-
