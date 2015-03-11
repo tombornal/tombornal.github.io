@@ -299,3 +299,19 @@ i {
      background-image: -o-linear-gradient(top, #fff, #f5f5f5);
      background-image: linear-gradient(to bottom, #fff, #f5f5f5);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#fff, endColorstr=#f5f5f5);
 }
+
+.footer-b {
+    background: black;
+    min-height: 60px;
+}
+
+.display-table {
+    display: table;
+    table-layout: fixed;
+}
+.display-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    float: none;
+}
