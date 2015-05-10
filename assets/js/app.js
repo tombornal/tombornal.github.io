@@ -6,21 +6,23 @@ var main = function() {
 	$('#singleSessionSignup').on('click', function() {
 	  ga('send', 'event', 'buyButton', 'click', 'singleSession', 35);
 	});
+	
 	$('#fivePackSignup').on('click', function() {
 	  ga('send', 'event', 'buyButton', 'click', 'fivePack', 150);
 	});
+
 	$('#customSignup').on('click', function() {
 	  ga('send', 'event', 'buyButton', 'click', 'customSession', 200);
 	});
-	/*$('#formComplete').on('click', function() {
-	  ga('send', 'event', 'buyButton', 'click', 'fromComplete');
-		Parse.initialize("lv8wq9RY8eZx0Hyevu8PaMVOTDHcH5JTYYpFsX6Z", "x9MWoecCxDBaBqp5FAc7W9kiLJFTHJg1vKY3DFfV");
-		var FormObject = Parse.Object.extend("FormObject");
-		var formObject = new FormObject();
-	});*/
 	
-$('#ss-submit').on('click', function() {
-		console.log("signup click registered");
+	$('#ss-submit').on('click', function() {
+		ga('send', 'event', 'buyButton', 'click', 'formComplete');
+	});
+	
+	/* Field validations and saving data to Parse */
+	$('#ss-form').submit(function(e){
+		console.log('Submit');
+		
 		Parse.initialize("lv8wq9RY8eZx0Hyevu8PaMVOTDHcH5JTYYpFsX6Z", "x9MWoecCxDBaBqp5FAc7W9kiLJFTHJg1vKY3DFfV");
 		var FormObject = Parse.Object.extend("FormObject");
 		var formObject = new FormObject();
@@ -28,32 +30,65 @@ $('#ss-submit').on('click', function() {
 		var schoolList = [];
 		$(':checkbox:checked').each(function(i){
 			if ($(this).val() == 'other_option') {
-				schoolList[i] = $('#entry_192234221_other_option_response').val();
+				schoolList[i] = $('#schoolOther_other_option_response').val();
 			} else {
 				schoolList[i] = $(this).val();
 			}
 		});
 
-		/*formObject.set("firstName", $('input[name=entry.1258718376]').val())
-		formObject.set("lastName", $('input[name=entry.1216210428]').val())
-		formObject.set("email", $('input[name=entry.310230083]').val())*/
+		$('#schoolList').val(schoolList);
 
-		formObject.save({
-			firstName: $('input[name=firstName]').val(),
-			lastName: $('input[name=lastName]').val(),
-			email: $('input[name=email]').val(),
-			schoolList: schoolList
-		}, {
-			success: function(formObject) {
-				// form was saved successfully
-				console.log("save successful");
-			},
-			error: function(formObject, error) {
-				// form was not saved
-				console.log(error);	
-			}
-		});
+		/* Check required fields have been completed */
+		if ($('#firstName').val() == "") {
+			console.log('firstName was empty');
+			$('#firstName').focus();
+			$('#firstNameErrorMessage').html("<span>This is a required field</span>");
+			e.preventDefault();
+		} else if ($('#lastName').val() == "") {
+			console.log('lastName was empty');
+			$('#lastName').focus();
+			$('#lastNameErrorMessage').html("<span>This is a required field</span>");
+			e.preventDefault();
+		} else if ($('#email').val().indexOf('@') == -1) {
+			console.log('email did not have @ symbol in it');
+			$('#email').focus();
+			$('#emailErrorMessage').html("<span>This is a required field</span>");
+			e.preventDefault();
+		} else if (schoolList.length == 0) {
+			console.log('No schools selected');
+			$('#schoolErrorMessage').html("<span>This is a required field</span>");
+			e.preventDefault();
+		} else {
+			e.preventDefault();
+			console.log('All fields were okay');
+
+			formObject.save({
+				firstName: $('input[name=firstName]').val(),
+				lastName: $('input[name=lastName]').val(),
+				email: $('input[name=email]').val(),
+				schoolList: schoolList
+			}, {
+				success: function(formObject) {
+					// form was saved successfully
+					console.log("save successful");
+					window.location.href = "thank-you-prospective.html";
+				},
+				error: function(formObject, error) {
+					// form was not saved
+					console.log(error);	
+				}
+			});
+		};
 	});
+	
+	/* Error message clearers */
+	$('.ss-q-short').click(function(){
+		$('.error-message').html("<span></span>");
+	});
+
+	$('.ss-q-checkbox').click(function(){
+		$('.error-message').html("<span></span>");
+	});		
 
 };
 

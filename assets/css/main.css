@@ -225,7 +225,7 @@ i {
     border-color: #dedede;
     border-style: solid;
     border-width: 1px 1px 3px;
-    margin: 0 10px;
+    margin: 0 10px 20px 10px;
     overflow: hidden;
     vertical-align: top;
     background: #fff;
@@ -271,6 +271,22 @@ i {
 
 .ss-choice-item {
     list-style-type: none;
+}
+
+.ss-q-item-label {
+    margin-bottom: 0px;
+}
+
+.ss-textinput {
+    padding-left: 10px;
+}
+
+.ss-choice-label {
+    padding-left: 5px;
+}
+
+.error-message {
+    color: red;
 }
 
 .container-signup-btn {

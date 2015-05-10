@@ -272,7 +272,7 @@
 					<div class="row">
 						<div class="col-sm-4 col-sm-offset-4">
 							
-							<form id="ss-form" target="_self" onsubmit="">
+							<form id="ss-form" action="thank-you-prospective.html" method="POST" target="_self" onsubmit="">
 								<ol role="list" class="ss-question-list" style="padding-left: 0">
 									<table>
 										<tr>
@@ -287,9 +287,9 @@
 																<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
 															</label>
 														</td>
-														<td>
+														<td class="ss-textinput">
 															<input type="text" name="firstName" value="" class="ss-q-short" id="firstName" dir="auto" aria-label="First Name  " aria-required="true" required="" title="">
-															<div class="error-message" id="1907770985_errorMessage"></div>
+															<div class="error-message" id="firstNameErrorMessage"></div>
 														</td>
 													</div>
 												</div>
@@ -307,9 +307,9 @@
 																<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
 															</label>
 														</td>
-														<td>
+														<td class="ss-textinput">
 															<input type="text" name="lastName" value="" class="ss-q-short" id="lastName" dir="auto" aria-label="Last Name  " aria-required="true" required="" title="">
-															<div class="error-message" id="754140818_errorMessage"></div>
+															<div class="error-message" id="lastNameErrorMessage"></div>
 														</td>
 													</div>
 												</div>
@@ -327,8 +327,9 @@
 																<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
 															</label>
 														</td>
-														<td>
+														<td class="ss-textinput">
 															<input type="email" name="email" value="" class="ss-q-short" id="email" dir="auto" aria-label="Email Address  Must be a valid email address" aria-required="true" required="" title="Must be a valid email address">
+															<div class="error-message" id="emailErrorMessage"></div>
 														</td>
 													</div>
 												</div>
@@ -342,6 +343,7 @@
 												<label class="ss-q-item-label" for="entry_1765889932">
 													<div class="ss-q-title">Interested in Hey Ivy consultants from:
 														<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+														<div class="error-message" id="schoolErrorMessage"></div>
 													</div>
 													<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
 												</label>
@@ -349,7 +351,7 @@
 													<li class="ss-choice-item">
 														<label>
 															<span class="ss-choice-item-control goog-inline-block">
-																<input type="checkbox" name="entry.192234221" value="Columbia Business School" id="group_192234221_3" role="checkbox" class="ss-q-checkbox" aria-required="true">
+																<input type="checkbox" name="school1" value="Columbia Business School" id="school1" role="checkbox" class="ss-q-checkbox" aria-required="true">
 															</span>
 															<span class="ss-choice-label">Columbia Business School</span>
 														</label>
@@ -357,7 +359,7 @@
 													<li class="ss-choice-item">
 														<label>
 															<span class="ss-choice-item-control goog-inline-block">
-																<input type="checkbox" name="entry.192234221" value="Harvard Business School" id="group_192234221_1" role="checkbox" class="ss-q-checkbox" aria-required="true">
+																<input type="checkbox" name="school2" value="Harvard Business School" id="school2" role="checkbox" class="ss-q-checkbox" aria-required="true">
 															</span>
 															<span class="ss-choice-label">Harvard Business School</span>
 														</label>
@@ -365,7 +367,7 @@
 													<li class="ss-choice-item">
 														<label>
 															<span class="ss-choice-item-control goog-inline-block">
-																<input type="checkbox" name="entry.192234221" value="Northwestern University (Kellogg)" id="group_192234221_6" role="checkbox" class="ss-q-checkbox" aria-required="true">
+																<input type="checkbox" name="school3" value="Northwestern University (Kellogg)" id="school3" role="checkbox" class="ss-q-checkbox" aria-required="true">
 															</span>
 															<span class="ss-choice-label">Northwestern University (Kellogg)</span>
 														</label>
@@ -373,7 +375,7 @@
 													<li class="ss-choice-item">
 														<label>
 															<span class="ss-choice-item-control goog-inline-block">
-																<input type="checkbox" name="entry.192234221" value="MIT (Sloan)" id="group_192234221_5" role="checkbox" class="ss-q-checkbox" aria-required="true">
+																<input type="checkbox" name="school4" value="MIT (Sloan)" id="school4" role="checkbox" class="ss-q-checkbox" aria-required="true">
 															</span>
 															<span class="ss-choice-label">MIT (Sloan)</span>
 														</label>
@@ -381,7 +383,7 @@
 													<li class="ss-choice-item">
 														<label>
 															<span class="ss-choice-item-control goog-inline-block">
-																<input type="checkbox" name="entry.192234221" value="University of Chicago (Booth)" id="group_192234221_4" role="checkbox" class="ss-q-checkbox" aria-required="true">
+																<input type="checkbox" name="school5" value="University of Chicago (Booth)" id="school5" role="checkbox" class="ss-q-checkbox" aria-required="true">
 															</span>
 															<span class="ss-choice-label">University of Chicago (Booth)</span>
 														</label>
@@ -389,7 +391,7 @@
 													<li class="ss-choice-item">
 														<label>
 															<span class="ss-choice-item-control goog-inline-block">
-																<input type="checkbox" name="entry.192234221" value="University of Pennsylvania (Wharton)" id="group_192234221_2" role="checkbox" class="ss-q-checkbox" aria-required="true">
+																<input type="checkbox" name="school6" value="University of Pennsylvania (Wharton)" id="school6" role="checkbox" class="ss-q-checkbox" aria-required="true">
 															</span>
 															<span class="ss-choice-label">University of Pennsylvania (Wharton)</span>
 														</label>
@@ -397,19 +399,19 @@
 													<li class="ss-choice-item">
 														<label>
 															<span class="ss-choice-item-control goog-inline-block">
-																<input type="checkbox" name="entry.192234221" value="other_option" id="group_192234221_7" role="checkbox" class="ss-q-checkbox ss-q-other-toggle" aria-required="true">
+																<input type="checkbox" name="schoolOther" value="other_option" id="schoolOther" role="checkbox" class="ss-q-checkbox ss-q-other-toggle" aria-required="true">
 															</span>
 															<span class="ss-choice-label">Other:</span>
 														</label>
 														<span class="ss-q-other-container goog-inline-block">
-															<input type="text" name="entry.192234221.other_option_response" value="" class="ss-q-other" id="entry_192234221_other_option_response" dir="auto" aria-label="Other">
+															<input type="text" name="schoolOther.other_option_response" value="" class="ss-q-other" id="schoolOther_other_option_response" dir="auto" aria-label="Other">
 														</span>
 													</li>
 												</ul>
-												<div class="error-message" id="1765889932_errorMessage"></div>
 											</div>
 										</div>
 									</div>
+									<input type="hidden" name="schoolList" id="schoolList">
 									<input type="hidden" name="draftResponse" value="[,,&quot;-1619214741754286111&quot;]">
 									<input type="hidden" name="pageHistory" value="0">
 									<input type="hidden" name="fbzx" value="-1619214741754286111">
@@ -417,7 +419,7 @@
 									<div class="ss-item ss-navigate">
 										<br>
 										<div class="row centered">
-														<button type="button" name="submit" value="Submit" id="ss-submit" class="btn btn-warning btn-lg">Sign up</button>
+														<button type="submit" name="submit" value="Submit" id="ss-submit" class="btn btn-warning btn-lg">Sign up</button>
 										</div>
 									</div>
 								</ol>
