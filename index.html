@@ -67,7 +67,7 @@
 		</script>
 		<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=332876676901085&amp;ev=PixelInitialized" /></noscript>
 
-		<!-- Parse SDK -->
+		<!-- Parse -->
 		<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -272,7 +272,7 @@
 					<div class="row">
 						<div class="col-sm-4 col-sm-offset-4">
 							
-							<form action="https://docs.google.com/forms/d/1AICWqxI-1CJd9eSp6SwqlOaJiS1vg2LswxpQOlcRRvQ/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+							<form id="ss-form" target="_self" onsubmit="">
 								<ol role="list" class="ss-question-list" style="padding-left: 0">
 									<table>
 										<tr>
@@ -280,7 +280,7 @@
 												<div dir="ltr" class="ss-item ss-item-required ss-text">
 													<div class="ss-form-entry">
 														<td>
-															<label class="ss-q-item-label" for="entry_1258718376">
+															<label class="ss-q-item-label" for="firstName">
 																<div class="ss-q-title">First Name
 																	<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
 																</div>
@@ -288,7 +288,7 @@
 															</label>
 														</td>
 														<td>
-															<input type="text" name="entry.1258718376" value="" class="ss-q-short" id="entry_1258718376" dir="auto" aria-label="First Name  " aria-required="true" required="" title="">
+															<input type="text" name="firstName" value="" class="ss-q-short" id="firstName" dir="auto" aria-label="First Name  " aria-required="true" required="" title="">
 															<div class="error-message" id="1907770985_errorMessage"></div>
 														</td>
 													</div>
@@ -300,7 +300,7 @@
 												<div dir="ltr" class="ss-item ss-item-required ss-text">
 													<div class="ss-form-entry">
 														<td>
-															<label class="ss-q-item-label" for="entry_1216210428">
+															<label class="ss-q-item-label" for="lastName">
 																<div class="ss-q-title">Last Name
 																	<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
 																</div>
@@ -308,7 +308,7 @@
 															</label>
 														</td>
 														<td>
-															<input type="text" name="entry.1216210428" value="" class="ss-q-short" id="entry_1216210428" dir="auto" aria-label="Last Name  " aria-required="true" required="" title="">
+															<input type="text" name="lastName" value="" class="ss-q-short" id="lastName" dir="auto" aria-label="Last Name  " aria-required="true" required="" title="">
 															<div class="error-message" id="754140818_errorMessage"></div>
 														</td>
 													</div>
@@ -320,7 +320,7 @@
 												<div dir="ltr" class="ss-item ss-item-required ss-text">
 													<div class="ss-form-entry">
 														<td>
-															<label class="ss-q-item-label" for="entry_310230083">
+															<label class="ss-q-item-label" for="email">
 																<div class="ss-q-title">Email Address
 																	<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
 																</div>
@@ -328,7 +328,7 @@
 															</label>
 														</td>
 														<td>
-															<input type="email" name="entry.310230083" value="" class="ss-q-short" id="entry_310230083" dir="auto" aria-label="Email Address  Must be a valid email address" aria-required="true" required="" title="Must be a valid email address">
+															<input type="email" name="email" value="" class="ss-q-short" id="email" dir="auto" aria-label="Email Address  Must be a valid email address" aria-required="true" required="" title="Must be a valid email address">
 														</td>
 													</div>
 												</div>
@@ -397,7 +397,7 @@
 													<li class="ss-choice-item">
 														<label>
 															<span class="ss-choice-item-control goog-inline-block">
-																<input type="checkbox" name="entry.192234221" value="__other_option__" id="group_192234221_7" role="checkbox" class="ss-q-checkbox ss-q-other-toggle" aria-required="true">
+																<input type="checkbox" name="entry.192234221" value="other_option" id="group_192234221_7" role="checkbox" class="ss-q-checkbox ss-q-other-toggle" aria-required="true">
 															</span>
 															<span class="ss-choice-label">Other:</span>
 														</label>
@@ -417,7 +417,7 @@
 									<div class="ss-item ss-navigate">
 										<br>
 										<div class="row centered">
-														<button type="submit" name="submit" value="Submit" id="ss-submit" class="btn btn-warning btn-lg" id="formComplete">Sign up</button>
+														<button type="button" name="submit" value="Submit" id="ss-submit" class="btn btn-warning btn-lg">Sign up</button>
 										</div>
 									</div>
 								</ol>
