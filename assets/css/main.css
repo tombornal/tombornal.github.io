@@ -331,3 +331,14 @@ i {
     text-align: center;
     float: none;
 }
+
+@media only screen and (max-width: 750px) {
+    .headerwrap {
+    background: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.7),
+          rgba(0, 0, 0, 0.7)
+        ),
+        url(../img/Columbia-Butler-Library_small.jpg) no-repeat top center;
+    }
+}
