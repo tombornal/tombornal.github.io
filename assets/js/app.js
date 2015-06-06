@@ -19,6 +19,23 @@ var main = function() {
 		ga('send', 'event', 'buyButton', 'click', 'formComplete');
 	});
 	
+	$('#share_fb').on('click', function() {
+		ga('send', 'event', 'share', 'click', 'fb');
+	});
+
+	$('#share_tw').on('click', function() {
+		ga('send', 'event', 'share', 'click', 'tw');
+	});
+
+	$('#share_li').on('click', function() {
+		ga('send', 'event', 'share', 'click', 'li');
+	});
+
+	$('#share_em').on('click', function() {
+		ga('send', 'event', 'share', 'click', 'em');
+	});
+
+
 	/* Field validations and saving data to Parse */
 	$('#ss-form').submit(function(e){
 		console.log('Submit');
