@@ -79,15 +79,29 @@ var main = function() {
 			e.preventDefault();
 			console.log('All fields were okay');
 
+			var firstName =  $('input[name=firstName]').val();
+			var lastName =  $('input[name=lastName]').val();
+			var email =  $('input[name=email]').val();
+
 			formObject.save({
-				firstName: $('input[name=firstName]').val(),
-				lastName: $('input[name=lastName]').val(),
-				email: $('input[name=email]').val(),
+				firstName: firstName,
+				lastName: lastName,
+				email: email,
 				schoolList: schoolList
 			}, {
 				success: function(formObject) {
 					// form was saved successfully
+					// test cloud function
 					console.log("save successful");
+					var schoolText = schoolList.join(", ");
+					Parse.Cloud.run('mailUser', {firstName: firstName, email: email, schoolList: schoolText}, {
+						success: function(message) {
+							console.log("Cloud function success");
+						},
+						error: function(error) {
+							console.log("Cloud function error");
+						}
+					});
 					window.location.href = "thank-you-prospective.html";
 				},
 				error: function(formObject, error) {
