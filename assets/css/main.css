@@ -148,8 +148,17 @@ i {
     margin: 200px 20px 0 20px;
     font-weight: 350;
     font-size: 50px;
-    color: white
-    ;
+    color: white;
+}
+
+@media (max-width: 412px) {
+    .intro_headline {
+        text-align: center;
+        margin: 90px 20px 0 20px;
+        font-weight: 350;
+        font-size: 46px;
+        color: white;
+    }
 }
 
 .split-pic{

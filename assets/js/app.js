@@ -39,6 +39,10 @@ var main = function() {
 		ga('send', 'event', 'share', 'click', 'em');
 	});
 
+	$('#learn-more-btn').on('click', function() {
+		ga('send', 'event', 'learnMore', 'click', 'learnMore');
+	});
+
 
 	/* Field validations and saving data to Parse */
 	$('#ss-form').submit(function(e){
