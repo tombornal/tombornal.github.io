@@ -177,7 +177,7 @@ var main = function() {
 							console.log("Cloud function error");
 						}
 					});
-					window.location.href = "thank-you-prospective.html";
+					window.location.href = "thank-you-student.html";
 				},
 				error: function(studentObject, error) {
 					// form was not saved
