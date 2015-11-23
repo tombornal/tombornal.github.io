@@ -87,8 +87,16 @@ var main = function() {
 			e.preventDefault();
 			console.log('All fields were okay');
 
-			var firstName =  $('input[name=firstName]').val();
-			var lastName =  $('input[name=lastName]').val();
+			var fullName =  $('input[name=fullName]').val();
+			
+			if (fullName.indexOf(" ") > -1) {
+				var firstName = fullName.substring(0,fullName.indexOf(" "));
+				var lastName = fullName.substring(fullName.indexOf(" ")+1);
+			} else {
+				var firstName = fullName;
+				var lastName = "";
+			};
+
 			var email =  $('input[name=email]').val();
 
 			formObject.save({
@@ -128,10 +136,10 @@ var main = function() {
 		var studentObject = new StudentObject();
 
 		/* Check required fields have been completed */
-		if ($('#firstName').val() == "") {
-			console.log('firstName was empty');
-			$('#firstName').focus();
-			$('#firstNameErrorMessage').html("<span>This is a required field</span>");
+		if ($('#fullName').val() == "") {
+			console.log('fullName was empty');
+			$('#fullName').focus();
+			$('#fullNameErrorMessage').html("<span>This is a required field</span>");
 			e.preventDefault();
 		} else if ($('#lastName').val() == "") {
 			console.log('lastName was empty');

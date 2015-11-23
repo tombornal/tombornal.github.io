@@ -271,7 +271,6 @@
 
 					<div class="row">
 						<div class="col-sm-4 col-sm-offset-4">
-							
 							<form id="ss-form" action="thank-you-prospective.html" method="POST" target="_self" onsubmit="">
 								<ol role="list" class="ss-question-list" style="padding-left: 0">
 									<table>
@@ -280,36 +279,16 @@
 												<div dir="ltr" class="ss-item ss-item-required ss-text">
 													<div class="ss-form-entry">
 														<td>
-															<label class="ss-q-item-label" for="firstName">
-																<div class="ss-q-title">First Name
+															<label class="ss-q-item-label" for="fullName">
+																<div class="ss-q-title">Full Name
 																	<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
 																</div>
 																<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
 															</label>
 														</td>
 														<td class="ss-textinput">
-															<input type="text" name="firstName" value="" class="ss-q-short" id="firstName" dir="auto" aria-label="First Name  " aria-required="true" required="" title="">
-															<div class="error-message" id="firstNameErrorMessage"></div>
-														</td>
-													</div>
-												</div>
-											</div> 
-										</tr>
-										<tr>
-											<div class="ss-form-question errorbox-good" role="listitem">
-												<div dir="ltr" class="ss-item ss-item-required ss-text">
-													<div class="ss-form-entry">
-														<td>
-															<label class="ss-q-item-label" for="lastName">
-																<div class="ss-q-title">Last Name
-																	<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-																</div>
-																<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
-															</label>
-														</td>
-														<td class="ss-textinput">
-															<input type="text" name="lastName" value="" class="ss-q-short" id="lastName" dir="auto" aria-label="Last Name  " aria-required="true" required="" title="">
-															<div class="error-message" id="lastNameErrorMessage"></div>
+															<input type="text" name="fullName" value="" class="ss-q-short" id="fullName" dir="auto" aria-label="First Name  " aria-required="true" required="" title="" placeholder="John Doe" autcomplete="name">
+															<div class="error-message" id="fullNameErrorMessage"></div>
 														</td>
 													</div>
 												</div>
@@ -328,7 +307,7 @@
 															</label>
 														</td>
 														<td class="ss-textinput">
-															<input type="email" name="email" value="" class="ss-q-short" id="email" dir="auto" aria-label="Email Address  Must be a valid email address" aria-required="true" required="" title="Must be a valid email address">
+															<input type="email" name="email" value="" class="ss-q-short" id="email" dir="auto" aria-label="Email Address  Must be a valid email address" aria-required="true" required="" title="Must be a valid email address" placeholder="johndoe@gmail.com" autcomplete="email">
 															<div class="error-message" id="emailErrorMessage"></div>
 														</td>
 													</div>
