@@ -282,8 +282,16 @@ i {
     list-style-type: none;
 }
 
-.ss-q-item-label {
-    margin-bottom: 0px;
+@media (max-width: 412px) {
+    .ss-choice-item {
+        padding: 3px;
+    }
+}
+
+@media (max-width: 412px) {
+    .ss-q-item-label {
+        margin-bottom: 10px;
+    }
 }
 
 .ss-textinput {
