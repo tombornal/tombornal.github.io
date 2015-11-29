@@ -43,6 +43,10 @@ var main = function() {
 		ga('send', 'event', 'learnMore', 'click', 'learnMore');
 	});
 
+	$('#learn-more-btn-2').on('click', function() {
+		ga('send', 'event', 'signUpTop', 'click', 'learnMore');
+	});
+
 
 	/* Field validations and saving data to Parse */
 	$('#ss-form').submit(function(e){

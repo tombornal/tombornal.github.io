@@ -27,12 +27,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 40px;
+	font-size: 32px;
+}
+
+@media (max-width: 412px) {
+    h1 {
+        font-size: 24px;
+    }
+}
+
+h2 {
+    font-size: 28px;
+}
+
+@media (max-width: 412px) {
+    h2 {
+        font-size: 20px;
+    }
 }
 
 h3 {
-	color: #95a5a6;
+	font-size: 24px;
+    color: #95a5a6;
 	font-weight: 400;
+}
+
+@media (max-width: 412px) {
+    h3 {
+        font-size: 18px;
+    }
 }
 
 h4 {
@@ -45,6 +68,10 @@ h4 {
 p {
     line-height: 28px;
     margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.sub-title {
     font-size: 16px;
 }
 
@@ -79,11 +106,26 @@ a:after {
     transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
+#learn-more-btn-2{
+    color: black;
+    background-color: #C1C1C1;  
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border: solid #C1C1C1 2px;
+    text-decoration: none;
+}
+
+#learn-more-btn-2:hover {
+    color: black;
+    background: #9b9b9b;
+    text-decoration: none;
+}
+
 #learn-more-btn{
     color: #C1C1C1;
     background-color: transparent;  
     font-size: 20px;
-    padding: 10px 20px 10px 20px;
+    padding: 10px;
     border: solid #C1C1C1 2px;
     text-decoration: none;
 }
@@ -92,6 +134,11 @@ a:after {
     color: black;
     background: #C1C1C1;
     text-decoration: none;
+}
+
+#button-group {
+    width: 50%;
+    margin: 0 auto;
 }
 
 hr {
@@ -132,6 +179,12 @@ hr {
 	margin-bottom: 40px;
 }
 
+@media (max-width: 412px) {
+    .mt {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
 .form-control {
 	height: 42px;
 	font-size: 18px;
@@ -144,19 +197,18 @@ i {
 }
 
 .intro_headline {
-    text-align: center;
+    
     margin: 200px 20px 0 20px;
-    font-weight: 350;
-    font-size: 50px;
+    font-weight: 300;
+    font-size: 32px;
     color: white;
 }
 
 @media (max-width: 412px) {
     .intro_headline {
-        text-align: center;
-        margin: 90px 20px 0 20px;
-        font-weight: 350;
-        font-size: 46px;
+        
+        font-weight: 300;
+        font-size: 24px;
         color: white;
     }
 }
@@ -169,8 +221,8 @@ i {
 .headerwrap {
     background: 
         linear-gradient(
-          rgba(0, 0, 0, 0.7),
-          rgba(0, 0, 0, 0.7)
+          rgba(0, 0, 0, 1),
+          rgba(0, 0, 0, 0.8)
         ),
         url(../img/Columbia-Butler-Library.jpg) no-repeat top center;
 	opacity: 0.9;
@@ -229,6 +281,16 @@ i {
 	letter-spacing: 1px;
 }
 
+@media (min-width: 412px) {
+    .headerwrap p {
+    font-size: 24px;
+}
+}
+
+.step {
+    margin-top: 20px;
+}
+
 .plan {
     border-radius: 6px;
     border-color: #dedede;
@@ -251,6 +313,12 @@ i {
     padding: 12px;
     min-height: 120px;
     font-size: 20px;
+}
+
+@media (max-width: 412px) {
+    .plan-body {
+        font-size: 18px;
+    }
 }
 
 .plan-pricing {
@@ -293,6 +361,13 @@ i {
         margin-bottom: 10px;
     }
 }
+
+@media (max-width: 412px) {
+    .ss-q-short {
+        
+    }
+}
+
 
 .ss-textinput {
     padding-left: 10px;
